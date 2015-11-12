@@ -16,3 +16,40 @@
     line-height: 2em;
     margin-left: 3%;
 }
+
+.profile_container {
+  margin: 120px 10px;
+  label {
+    text-align: right;
+  }
+}
+
+.image {
+  float:left;
+}
+
+.pic_with_name {
+  a {
+    float:left;
+  }
+  margin: 30px;
+}
+.profile_info {
+  float:right;
+}
+
+.profile_videos {
+  max-width: 1200px; 
+  min-width: 1000px; 
+  // padding: none;
+  .intro_video {
+    // float:left;
+  }
+  .what_sets_you_apart_video {
+    // float:right;
+    // margin-left: 5%;
+  }
+  p {
+    font-weight: 700;
+  }
+}

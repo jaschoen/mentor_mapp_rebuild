@@ -1,0 +1,2 @@
+class TosController < ApplicationController
+end
