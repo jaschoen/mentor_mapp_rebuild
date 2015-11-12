@@ -1,0 +1,36 @@
+#contact_us_container {
+  padding: 0;
+  margin: 0 0 5% 10%;
+}
+
+#contact_thank_you {
+  padding: 100px 100px 0 0;
+  margin: 100px 100px;
+}
+
+#mentor_description {
+  margin-top: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+    background: none repeat scroll 0 0 #eeeded;
+    border: 1px solid #ad9d9d;
+    border-radius: 4px;
+    color: #2d2525;
+    padding: 3px 4px;
+    width: 75%;
+}
+
+textarea {
+  background: none repeat scroll 0 0 #eeeded;
+  border: 1px solid #ad9d9d;
+  border-radius: 4px;
+  color: #2d2525;
+  padding: 3px 4px;
+  width: 75%;
+  min-height: 100px;
+}
