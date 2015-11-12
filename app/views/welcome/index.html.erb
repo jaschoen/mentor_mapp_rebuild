@@ -31,97 +31,99 @@
 </div>
 
 <!-- Testimonials start here -->
-<div class="testimonials_animated">
-  <div class="row">
-    <div class="col-sm-12">
-      <div id="secondCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#secondCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#secondCarousel" data-slide-to="1"></li>
-          <li data-target="#secondCarousel" data-slide-to="2"></li>
-          <li data-target="#secondCarousel" data-slide-to="3"></li>
-        </ol>
+<div class="container">
+  <div class="testimonials_animated">
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="secondCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#secondCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#secondCarousel" data-slide-to="1"></li>
+            <li data-target="#secondCarousel" data-slide-to="2"></li>
+            <li data-target="#secondCarousel" data-slide-to="3"></li>
+          </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active container testimonial_container row">
-            <div class="col-sm-5 testimonial_image">
-              <p>
-              <%= link_to image_tag("testimonial1.png", :height => 200, :width => 200, :alt => "Person1"), {:class => "img-responsive testimonial-paragraph", :alt => "Responsive image", :align => "center"} %> </p>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active container testimonial_container row">
+              <div class="col-sm-5 testimonial_image">
+                <p>
+                <%= link_to image_tag("testimonial1.png", :height => 200, :width => 200, :alt => "Person1"), {:class => "img-responsive testimonial-paragraph", :alt => "Responsive image", :align => "center"} %> </p>
 
+              </div>
+              <div class="col-sm-7">
+                <P class="testimonial-paragraph">
+                We do our coaching work well, but it is hard to find clients. If we had a system to put us in better contact with companies, with potential customers, that would be a huge plus.
+                <BR><BR><EM>
+                <b>- </b></EM><b>President, corporate development firm and Leadership Coach</b>
+                </P>
+                <ul class="testimonial_buttons">
+                  <li><%= link_to "Find A Coach",          new_contact_path %></li>
+                  <li><%= link_to "Become A Coach",        new_contact_path %></li>
+                </ul>
+             </div>
             </div>
-            <div class="col-sm-7">
-              <P class="testimonial-paragraph">
-              We do our coaching work well, but it is hard to find clients. If we had a system to put us in better contact with companies, with potential customers, that would be a huge plus.
-              <BR><BR><EM>
-              <b>- </b></EM><b>President, corporate development firm and Leadership Coach</b>
-              </P>
-              <ul class="testimonial_buttons">
-                <li><%= link_to "Find A Coach",          new_contact_path %></li>
-                <li><%= link_to "Become A Coach",        new_contact_path %></li>
-              </ul>
-           </div>
+            <div class="item container testimonial_container row">
+              <div class="col-sm-5 testimonial_image">
+                <p><%= link_to image_tag("testimonial2.png", :height => 200, :width => 200, :alt => "Person2"), {:class => "img-responsive testimonial-paragraph", :alt => "Responsive image", :align => "center"} %> </p>
+              </div>
+              <div class="col-sm-7">
+                <P class="testimonial-paragraph">
+                We have volunteer coaches, so you get matched up with someone, but the only criterion is availability. So it would make sense to find a better way of matching up need with expertise, skills, or interests. For example, if you are not doing so well in one area, you could be matched up with a coach/mentor who does extraordinarily well in that area.
+                <BR><BR><EM>
+                <b>- </b></EM><b>Senior Director, Outreach, Diversity and Inclusion</b>
+                </P>
+                <ul class="testimonial_buttons">
+                  <li><%= link_to "Find A Coach",          new_contact_path %></li>
+                  <li><%= link_to "Become A Coach",        new_contact_path %></li>
+                </ul>
+              </div>
+            </div>
+            <div class="item container testimonial_container row">
+              <div class="col-sm-5 testimonial_image">
+                <p><%= image_tag("testimonial3.png", :height => 200, :width => 200, :alt => "Person3")%> </p>
+              </div>
+              <div class="col-sm-7 ">
+                <P class="testimonial-paragraph">
+                There is a lot of confusion out there for the buyer … there are life coaches, business coaches, executive coaches. There are just too many titles and not enough differentiation. There is a lot of false marketing out there in terms of who actually has executive coaching experience. I can see with my own business just how valuable my executive experience actually is. You know just what to ask and can understand immediately what their needs are.
+                <BR><BR><EM>
+                <b>- </b></EM><b>CEO, global consulting firm and Executive Coach</b>
+                </P>
+                <ul class="testimonial_buttons">
+                  <li><%= link_to "Find A Coach",          new_contact_path %></li>
+                  <li><%= link_to "Become A Coach",        new_contact_path %></li>
+                </ul>
+              </div>
+            </div>
+            <div class="item container testimonial_container row">
+              <div class="col-sm-5 testimonial_image">
+                <p><%= link_to image_tag("testimonial4.png", :height => 200, :width => 200, :alt => "Person4"), {:class => "img-responsive testimonial-paragraph", :alt => "Responsive image", :align => "center"} %> </p>
+              </div>
+              <div class="col-sm-7">
+                <P class="testimonial-paragraph">
+                It’s a great idea to start rating coaches. In Denmark, we have websites where patients can rate doctors and dentists. It would be a great idea if we could do the same thing with coaches. It would be like TripAdvisor, which really works. For me, it would help in terms of hiring coaches so you could see feedback from their clients. Coaches could be rated in specific areas, such as hiring management. Then we could see ratings, coaching fields, and whether they work globally or locally.
+                <BR><BR><EM>
+                <b>- </b></EM><b>Business Owner and Executive Coach</b>
+                </P>
+                <ul class="testimonial_buttons">
+                  <li><%= link_to "Find A Coach",          new_contact_path %></li>
+                  <li><%= link_to "Become A Coach",        new_contact_path %></li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="item container testimonial_container row">
-            <div class="col-sm-5 testimonial_image">
-              <p><%= link_to image_tag("testimonial2.png", :height => 200, :width => 200, :alt => "Person2"), {:class => "img-responsive testimonial-paragraph", :alt => "Responsive image", :align => "center"} %> </p>
-            </div>
-            <div class="col-sm-7">
-              <P class="testimonial-paragraph">
-              We have volunteer coaches, so you get matched up with someone, but the only criterion is availability. So it would make sense to find a better way of matching up need with expertise, skills, or interests. For example, if you are not doing so well in one area, you could be matched up with a coach/mentor who does extraordinarily well in that area.
-              <BR><BR><EM>
-              <b>- </b></EM><b>Senior Director, Outreach, Diversity and Inclusion</b>
-              </P>
-              <ul class="testimonial_buttons">
-                <li><%= link_to "Find A Coach",          new_contact_path %></li>
-                <li><%= link_to "Become A Coach",        new_contact_path %></li>
-              </ul>
-            </div>
-          </div>
-          <div class="item container testimonial_container row">
-            <div class="col-sm-5 testimonial_image">
-              <p><%= image_tag("testimonial3.png", :height => 200, :width => 200, :alt => "Person3")%> </p>
-            </div>
-            <div class="col-sm-7 ">
-              <P class="testimonial-paragraph">
-              There is a lot of confusion out there for the buyer … there are life coaches, business coaches, executive coaches. There are just too many titles and not enough differentiation. There is a lot of false marketing out there in terms of who actually has executive coaching experience. I can see with my own business just how valuable my executive experience actually is. You know just what to ask and can understand immediately what their needs are.
-              <BR><BR><EM>
-              <b>- </b></EM><b>CEO, global consulting firm and Executive Coach</b>
-              </P>
-              <ul class="testimonial_buttons">
-                <li><%= link_to "Find A Coach",          new_contact_path %></li>
-                <li><%= link_to "Become A Coach",        new_contact_path %></li>
-              </ul>
-            </div>
-          </div>
-          <div class="item container testimonial_container row">
-            <div class="col-sm-5 testimonial_image">
-              <p><%= link_to image_tag("testimonial4.png", :height => 200, :width => 200, :alt => "Person4"), {:class => "img-responsive testimonial-paragraph", :alt => "Responsive image", :align => "center"} %> </p>
-            </div>
-            <div class="col-sm-7">
-              <P class="testimonial-paragraph">
-              It’s a great idea to start rating coaches. In Denmark, we have websites where patients can rate doctors and dentists. It would be a great idea if we could do the same thing with coaches. It would be like TripAdvisor, which really works. For me, it would help in terms of hiring coaches so you could see feedback from their clients. Coaches could be rated in specific areas, such as hiring management. Then we could see ratings, coaching fields, and whether they work globally or locally.
-              <BR><BR><EM>
-              <b>- </b></EM><b>Business Owner and Executive Coach</b>
-              </P>
-              <ul class="testimonial_buttons">
-                <li><%= link_to "Find A Coach",          new_contact_path %></li>
-                <li><%= link_to "Become A Coach",        new_contact_path %></li>
-              </ul>
-            </div>
-          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#secondCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="font-size: 50px"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#secondCarousel" role="button" data-slide="next" >
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="font-size: 50px"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#secondCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="font-size: 50px"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#secondCarousel" role="button" data-slide="next" >
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="font-size: 50px"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
     </div>
   </div>
@@ -146,7 +148,6 @@
        <%= link_to image_tag("desktop.png", height: '500', width: '580', :alt => "") %>
       </div>
     </div>
-
   </div>
 </div>
 

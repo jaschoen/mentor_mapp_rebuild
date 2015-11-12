@@ -1,3 +1,18 @@
-// Place all the styles related to the Profiles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.profile_form .simple_form .form-control {
+    background: none repeat scroll 0 0 #eeeded;
+    border: 1px solid #ad9d9d;
+    border-radius: 4px;
+    color: #2d2525;
+    padding: 3px 4px;
+    width: 90%;
+}
+
+.profile_form .simple_form .form-actions input {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    padding: 3px 4px;
+    width: 90%;
+    line-height: 2em;
+    margin-left: 3%;
+}

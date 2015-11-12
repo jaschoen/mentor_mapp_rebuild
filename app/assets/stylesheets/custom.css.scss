@@ -149,15 +149,14 @@ ul.testimonial_buttons li:last-child {
 }
 
 p.testimonial-paragraph {
-  padding: 5% 0 0 5%;
+  padding: 10% 12% 0 0;
   color: #606060 !important;
   box-sizing: border-box;
-  font-size: 18px !important;
+  font-size: 15px !important;
 }
 .testimonial_image {
   text-align: right;
-  padding-right: 5%;
-  padding-top: 5%;
+  padding: 5% 7% 0 0;
 }
 
 .testimonial_container {
@@ -196,7 +195,7 @@ p.testimonial-paragraph {
   text-align: center;
 }
 .pc_photo {
-  margin: 50px 0;
+  margin: 50px 2% 0 -2%;
 }
 .border_spe {
     border-bottom: 4px solid #f7921e;
@@ -205,6 +204,7 @@ p.testimonial-paragraph {
 // =========================How it works Styles ===================================
 .why_use_it {
   background: #f5f6f8;
+  margin-top: 40px;
 }
 
 .why_it_works_iphone {

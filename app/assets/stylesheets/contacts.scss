@@ -1,28 +1,32 @@
 #contact_us_container {
-  padding: 0;
-  margin: 0 0 5% 10%;
+  margin-bottom: 15px;
 }
-
 #contact_thank_you {
-  padding: 100px 100px 0 0;
-  margin: 100px 100px;
+  margin: 10%;
 }
 
 #mentor_description {
   margin-top: 15px;
+}
+.contact_image {
+  padding: 15px;
+}
+.letter_spacing_bigger {
+  letter-spacing: 1.5px;
 }
 
 h1 {
   text-align: center;
 }
 
+// ========================form input data styles======================
 input {
     background: none repeat scroll 0 0 #eeeded;
     border: 1px solid #ad9d9d;
     border-radius: 4px;
     color: #2d2525;
     padding: 3px 4px;
-    width: 75%;
+    width: 100%;
 }
 
 textarea {
@@ -31,6 +35,6 @@ textarea {
   border-radius: 4px;
   color: #2d2525;
   padding: 3px 4px;
-  width: 75%;
+  width: 100%;
   min-height: 100px;
 }
