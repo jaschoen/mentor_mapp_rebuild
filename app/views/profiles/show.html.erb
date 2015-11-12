@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @profile.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @profile.last_name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @profile.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @profile.state %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @profile.bio %>
+</p>
+
+<p>
+  <strong>Coach type:</strong>
+  <%= @profile.coach_type %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @profile.rating %>
+</p>
+
+<p>
+  <strong>Price low:</strong>
+  <%= @profile.price_low %>
+</p>
+
+<p>
+  <strong>Price high:</strong>
+  <%= @profile.price_high %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @profile.language %>
+</p>
+
+<p>
+  <strong>Certification:</strong>
+  <%= @profile.certification %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @profile.skills %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @profile.experience %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile.email %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>

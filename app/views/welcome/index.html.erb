@@ -1,0 +1,222 @@
+<!-- First Image and background text  -->
+<div class="container ">
+  <div class="row">
+    <div class="front_image">
+      <%= image_tag("cover_image.jpg", alt: "Cover Image", class: "img-responsive") %>
+    </div>
+    <p class="front_text">
+      Marketplace where coaches and clients invest in their future
+    </p>
+  </div>
+</div>
+
+<!-- What is mentormapp -->
+<div class="container">
+  <div class="row">
+    <div class="def_mentormapp">
+      <div class="col-sm-4">
+        <h1 class="what_mentor_mapp">
+           What is
+          <br>
+          <span>MentorMapp?</span>
+        </h1>
+      </div>
+      <div class="col-sm-8">
+        <p class="info">
+          MentorMapp is a safe, efficient, affordable way to match coaches with people (and companies) seeking coaching. You can use MentorMapp to get access to, engage with, connect with, and collaborate with a community of coaches who are experts in leadership, management, and wellbeing. Participants can share their experiences with the community in total confidentiality.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Testimonials start here -->
+<div class="testimonials_animated">
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="secondCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#secondCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#secondCarousel" data-slide-to="1"></li>
+          <li data-target="#secondCarousel" data-slide-to="2"></li>
+          <li data-target="#secondCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active container testimonial_container row">
+            <div class="col-sm-5 testimonial_image">
+              <p>
+              <%= link_to image_tag("testimonial1.png", :height => 200, :width => 200, :alt => "Person1"), {:class => "img-responsive testimonial-paragraph", :alt => "Responsive image", :align => "center"} %> </p>
+
+            </div>
+            <div class="col-sm-7">
+              <P class="testimonial-paragraph">
+              We do our coaching work well, but it is hard to find clients. If we had a system to put us in better contact with companies, with potential customers, that would be a huge plus.
+              <BR><BR><EM>
+              <b>- </b></EM><b>President, corporate development firm and Leadership Coach</b>
+              </P>
+              <ul class="testimonial_buttons">
+                <li><%= link_to "Find A Coach",          new_contact_path %></li>
+                <li><%= link_to "Become A Coach",        new_contact_path %></li>
+              </ul>
+           </div>
+          </div>
+          <div class="item container testimonial_container row">
+            <div class="col-sm-5 testimonial_image">
+              <p><%= link_to image_tag("testimonial2.png", :height => 200, :width => 200, :alt => "Person2"), {:class => "img-responsive testimonial-paragraph", :alt => "Responsive image", :align => "center"} %> </p>
+            </div>
+            <div class="col-sm-7">
+              <P class="testimonial-paragraph">
+              We have volunteer coaches, so you get matched up with someone, but the only criterion is availability. So it would make sense to find a better way of matching up need with expertise, skills, or interests. For example, if you are not doing so well in one area, you could be matched up with a coach/mentor who does extraordinarily well in that area.
+              <BR><BR><EM>
+              <b>- </b></EM><b>Senior Director, Outreach, Diversity and Inclusion</b>
+              </P>
+              <ul class="testimonial_buttons">
+                <li><%= link_to "Find A Coach",          new_contact_path %></li>
+                <li><%= link_to "Become A Coach",        new_contact_path %></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item container testimonial_container row">
+            <div class="col-sm-5 testimonial_image">
+              <p><%= image_tag("testimonial3.png", :height => 200, :width => 200, :alt => "Person3")%> </p>
+            </div>
+            <div class="col-sm-7 ">
+              <P class="testimonial-paragraph">
+              There is a lot of confusion out there for the buyer … there are life coaches, business coaches, executive coaches. There are just too many titles and not enough differentiation. There is a lot of false marketing out there in terms of who actually has executive coaching experience. I can see with my own business just how valuable my executive experience actually is. You know just what to ask and can understand immediately what their needs are.
+              <BR><BR><EM>
+              <b>- </b></EM><b>CEO, global consulting firm and Executive Coach</b>
+              </P>
+              <ul class="testimonial_buttons">
+                <li><%= link_to "Find A Coach",          new_contact_path %></li>
+                <li><%= link_to "Become A Coach",        new_contact_path %></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item container testimonial_container row">
+            <div class="col-sm-5 testimonial_image">
+              <p><%= link_to image_tag("testimonial4.png", :height => 200, :width => 200, :alt => "Person4"), {:class => "img-responsive testimonial-paragraph", :alt => "Responsive image", :align => "center"} %> </p>
+            </div>
+            <div class="col-sm-7">
+              <P class="testimonial-paragraph">
+              It’s a great idea to start rating coaches. In Denmark, we have websites where patients can rate doctors and dentists. It would be a great idea if we could do the same thing with coaches. It would be like TripAdvisor, which really works. For me, it would help in terms of hiring coaches so you could see feedback from their clients. Coaches could be rated in specific areas, such as hiring management. Then we could see ratings, coaching fields, and whether they work globally or locally.
+              <BR><BR><EM>
+              <b>- </b></EM><b>Business Owner and Executive Coach</b>
+              </P>
+              <ul class="testimonial_buttons">
+                <li><%= link_to "Find A Coach",          new_contact_path %></li>
+                <li><%= link_to "Become A Coach",        new_contact_path %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#secondCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="font-size: 50px"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#secondCarousel" role="button" data-slide="next" >
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="font-size: 50px"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonials End here -->
+
+<!-- How does it work? -->
+<div class="container">
+  <div class="row">
+    <div class="how_it_work_con">
+      <div class="col-sm-6 col-xs-12 how_it_work">
+        <h1><span class="border_spe">How</span> it works</h1>
+        <ul>
+          <li><%= link_to image_tag("access.jpg", :alt => "") %>
+            <span><h1>Access</h1><p>Our coaching knowledge base by joining our community of coaching practitioners and researchers</p></span></li>
+          <li><%= link_to image_tag("engage.jpg", :alt => "") %><span><h1>Engage</h1><p>With a coaching community of customers, suppliers, and users by posting engaging coaching content</p></span></li>
+          <li><%= link_to image_tag("connect.jpg", :alt => "") %><span><h1>Connect</h1><p>With customers, suppliers, and a growing user network to source or acquire coaching expertise</p></span></li>
+          <li><%= link_to image_tag("cola.jpg", :alt => "") %><span><h1>Collaborate</h1><p>In a creative partnership as a coach, as an individual, or as a company seeking coaching engagements</p></span></li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-xs-12 pc_photo mobile_correct_display">
+       <%= link_to image_tag("desktop.png", height: '500', width: '580', :alt => "") %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Why Use it? -->
+<div class="why_use_it" >
+  <div class="container">
+    <div class="row ">
+      <div class="col-sm-6 why_it_works_iphone">
+        <%= link_to image_tag("iphonemock-cropped.png", :alt => "phone") %>
+      </div>
+      <div class="col-sm-6 how_it_work">
+        <h1><span class="border_spe">Why</span> use it</h1><br><br>
+        <ul>
+          <li>
+            <%= link_to image_tag("central.png", :alt => "pointer") %>
+            <span><h1>Centralized</h1><p>Knowledge base for coaches, clients, and companies</p></span></li>
+          <li><%= link_to image_tag("affordable.png", :alt => "pointer") %><span><h1>Affordable</h1><p>Sourcing and acquisition of coaching engagements</p></span></li>
+          <li><%= link_to image_tag("on_demand.png", :alt => "pointer") %><span><h1>On Demand</h1><p>Access to users, customers, and suppliers in coaching networks</p></span></li>
+          <li><%= link_to image_tag("empower.png", :alt => "pointer") %><span><h1>Empowering</h1><p>With discretion among multiple coaching engagement options</p></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Pricing -->
+<div class="container">
+    <div class="row pricing_area">
+
+      <div class="col-sm-4">
+        <div class="pricing_table">
+          <h1>Short-term 12x Month</h1>
+          <div style="background:#f5f6f8;text-align:center;">
+            <p class="price">$29</p>
+            <p class="per_month">per month</p>
+          </div>
+            <p><b>1-3 Months Coaching</b> Match Coach and Client</p>
+            <p><b>Silver Membership</b> Community Benefits</p>
+            <p><b>Basic</b> Membership Program</p>
+            <p class="contact"><%= link_to "Contact Us", new_contact_path %></p>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="pricing_table">
+          <h1>Standard 12x Month</h1>
+          <div style="background:#f5f6f8;text-align:center;">
+            <p class="price">$69</p>
+            <p class="per_month">per month</p>
+          </div>
+          <p><b>3-6 Months Coaching</b> Match Coach and Client</p>
+          <p><b>Gold Membership</b> Community Benefits</p>
+          <p><b>Professional</b> Membership Program</p>
+          <p class="contact"><%= link_to "Contact Us", new_contact_path %></p>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="pricing_table">
+          <h1>Enterprise 12x Month</h1>
+          <div style="background:#f5f6f8;text-align:center;">
+            <p class="price">$99</p>
+            <p class="per_month">per month</p>
+          </div>
+          <p><b>6+ Months Coaching</b> Match Coach and Client</p>
+          <p><b>Platinum Membership</b> Community Benefits</p>
+          <p><b>Enterprise</b> Membership Program</p>
+          <p class="contact"><%= link_to "Contact Us", new_contact_path %></p>
+        </div>
+      </div>
+
+    </div>
+</div>

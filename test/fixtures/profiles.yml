@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  city: MyString
+  state: MyString
+  bio: MyText
+  coach_type: MyString
+  rating: 1
+  price_low: 1
+  price_high: 1
+  language: MyString
+  certification: MyString
+  skills: MyString
+  experience: MyString
+  email: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  city: MyString
+  state: MyString
+  bio: MyText
+  coach_type: MyString
+  rating: 1
+  price_low: 1
+  price_high: 1
+  language: MyString
+  certification: MyString
+  skills: MyString
+  experience: MyString
+  email: MyString

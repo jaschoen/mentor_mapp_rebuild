@@ -1,0 +1,260 @@
+// div {
+//   border: 1px solid blue;
+// }
+
+// =========================Header Styles ===================================
+
+.navbar {
+  // position: relative;
+  min-height: 50px;
+      background: rgba(255, 255, 255, 0.7);
+}
+.nav_box ul{margin:0;padding:0;list-style:none;float:right;}
+.nav_box ul li {
+  float: left;
+  font-size: 16px;
+  margin: 17px 0 17px 36px;
+}
+.nav_box ul li a {
+  color: #766161;
+  font-weight: 400;
+}
+.nav_box ul li a:hover {
+  color: #3e3636;
+  background-color:transparent;
+}
+header img {
+  float: left;
+}
+
+// Padding for transparent navbar
+// body { padding-top: 80px; }
+
+// =========================Footer Styles ===================================
+footer {
+  background: #2a2925;
+  padding: 0;
+  text-align:left;
+  margin:0;  
+  width: 100%;
+  h5{
+    text-align:left;
+  }
+}
+.foo_menu {
+  list-style: none outside none;
+  margin: 18px 0 0;
+  padding: 0;
+}
+.foo_menu li {
+  color: #beb1b1;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.foo_menu li  a{
+  color: #beb1b1;
+  font-size: 15px;
+}
+.foo_menu > li span {
+  border-bottom: 2px solid #f7931b;
+  padding-bottom: 4px;
+}
+
+// =========================Body Styles ===================================
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333333;
+  background-color: #fff;
+}
+
+// =========================First Image Styles ===================================
+.front_text {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  width: 30%;
+  margin: 11%;
+  color: #826767;
+  float: left;
+  font-size: 2.7vw;
+}
+
+// =========================What is mentormapp Styles ===================================
+.def_mentormapp {
+    color: #604747;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 40px 0;
+    p {
+      font-family: monospace;
+      color: #474747;
+      line-height: 1.5em;
+    }
+}
+.what_mentor_mapp {
+  text-align: left;
+  span {
+    border-left: 4px solid #f7921e;
+    margin-left: -9px;
+    padding-left: 7px;
+    padding-top: 15px;
+  }
+}
+
+// =========================Testimonials Styles ===================================
+.testimonials_animated {
+  width: 100%;
+  // float: left;
+  background: #eeeeee;
+  margin-top: 40px;
+}
+
+.carousel-indicators li{display:none;}
+
+// .carousel-inner {
+//   left: 0;
+//   background: white;
+// }
+// .carousel-indicators {
+//   font-size: 70px;
+//   font-weight: 400;
+//   font-weight: bold;
+// }
+
+
+
+ul.testimonial_buttons li {
+  margin: 45px 27px 30px;
+  padding: 9px 18px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+
+}
+ul.testimonial_buttons li:first-child {
+    background: #0773b4;
+    a{
+      color: white;
+    }}
+ul.testimonial_buttons li:last-child {
+    background: #f7921e;
+    a{
+      color: white;
+    }
+}
+
+p.testimonial-paragraph {
+  padding: 5% 0 0 5%;
+  color: #606060 !important;
+  box-sizing: border-box;
+  font-size: 18px !important;
+}
+.testimonial_image {
+  text-align: right;
+  padding-right: 5%;
+  padding-top: 5%;
+}
+
+.testimonial_container {
+}
+// =========================How it works Styles ===================================
+
+
+.how_it_work {
+  margin: 5% 0 0 0;
+}
+.how_it_work ul{margin:0;padding:0;list-style:none;}
+.how_it_work ul li {
+  margin-bottom: 36px;
+}
+.how_it_work ul li h1 {
+  text-align: left;
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-bottom: 1%;
+  margin-top: 7px;
+  line-height: 1.1;
+}
+.how_it_work ul li img {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+.how_it_work ul li p {
+  color: #5c5252;
+  font-size: 12px;
+}
+.how_it_work h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin: 3% 0 10% 0;
+  text-align: center;
+}
+.pc_photo {
+  margin: 50px 0;
+}
+.border_spe {
+    border-bottom: 4px solid #f7921e;
+}
+
+// =========================How it works Styles ===================================
+.why_use_it {
+  background: #f5f6f8;
+}
+
+.why_it_works_iphone {
+  text-align: right;
+  padding: 0 7% 0 0;
+}
+.why_use_it .how_it_work h1 {
+  margin: 0 0 0.5em 0;
+}
+// =========================Pricing Styles ===================================
+.pricing_table {
+  border: 3px solid #ddd;
+}
+.pricing_table p {
+  padding: 10px;
+}
+.pricing_table h1 {
+  color: #000;
+  font-size: 24px;
+  margin: 17px 0;
+  text-align: center;
+}
+.price {
+  color: #f9901b;
+  font-size: 39px;
+  font-style: italic;
+  text-align: center;
+}
+.per_month {
+  color: #786464;
+  font-size: 18px;
+  margin-top: -42px;
+}
+.pricing_table a {
+  border: 2px solid #f7921e;
+  color: #000;
+  display: inline-block;
+  font-size: 15px;  
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  padding: 10px 25px;
+}
+.row.pricing_area {
+  margin: 70px 0;
+}
+p.contact {
+  text-align: center;
+}
+.pricing_area {  
+  a:hover {
+    color: #2a6496;
+    text-decoration: underline;
+  }
+}
+

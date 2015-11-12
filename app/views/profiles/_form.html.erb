@@ -1,0 +1,24 @@
+<%= simple_form_for(@profile) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :city %>
+    <%= f.input :state %>
+    <%= f.input :bio %>
+    <%= f.input :coach_type %>
+    <%= f.input :rating %>
+    <%= f.input :price_low %>
+    <%= f.input :price_high %>
+    <%= f.input :language %>
+    <%= f.input :certification %>
+    <%= f.input :skills %>
+    <%= f.input :experience %>
+    <%= f.input :email %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
