@@ -41,13 +41,17 @@
 .profile_videos {
   max-width: 1200px; 
   min-width: 1000px; 
+
   // padding: none;
   .intro_video {
+    // max-width: 95%;
+    // margin-left: 5px;
     // float:left;
   }
   .what_sets_you_apart_video {
     // float:right;
-    // margin-left: 5%;
+    // margin-left: 5px;
+    max-width: 95%
   }
   p {
     font-weight: 700;
