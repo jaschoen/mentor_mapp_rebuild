@@ -5,18 +5,29 @@
 
 <!-- Pic and contact info -->
   <div class="container">
-    <div class="pic_with_name col-sm-6">
-      <%= link_to image_tag("testimonial2.png", :height => 200, :width => 200, :alt => "Person1"), {:class => "", :alt => "Profile Picture"} %> 
-      <div class="profile_info">
-        <h2><%= @profile.first_name  %> <%= @profile.last_name  %></h2>
-        <h4><%= @profile.industry  %> </h4>
-        <h4><%= @profile.city %>, <%= @profile.state %></h4>
-        <button class="btn-lg btn-block"> Contact </button><br>
-        <button class="btn-lg btn-block"> Add to favorites </button>
-
+    <div class="row">
+      <div class="pic_with_name col-sm-3">
+        <%= link_to image_tag("https://rimbizblog.files.wordpress.com/2015/03/asian-guy-looking-down-at-smartphone-square.jpg", :height => 250, :width => 250, :alt => "Profile Picture", :class => "img-responsive") %>
+      </div> 
+      <div class="col-sm-9 box_for_info">
+        <div class="row">
+          <div class="profile_info col-sm-4">
+            <h3><%= @profile.first_name  %> <%= @profile.last_name  %></h3>
+            <h5><span><%= @profile.city %></span>, <%= @profile.state %></h5>
+          </div>
+          <div class="col-sm-2"></div>
+          <div class="profile_links col-sm-6">
+            <h4><%= link_to("Resume", "#") %></h4>
+            <h4 id="resume_link"><%= link_to("Contact", "#") %></h4>
+          </div>
+        </div>
+        <h3> Bio</h3>
+        <%= @profile.bio %>
+        <h4><span class="gray_background"><%= @profile.coach_type %></span></h4>
       </div>
     </div>
   </div>
+
 <!-- Profile Videos -->
   <div class="profile_videos container">
     <div class="row">
@@ -33,13 +44,17 @@
 <!-- Bio -->
   <div class="container">
     <div class="row">
-      <div class="col-sm-7">
-        <h2>Bio</h2>
-        <%= @profile.bio  %>
+      <div class="col-sm-6 profile_skills">
         <h2>Skills</h2>
-        <%= @profile.skills  %>
+        <% skills = @profile.skills.split(' ')%>
+        <h3><% skills.each do |skill| %></h3>
+        <span class="gray_background"><%= skill %></span>
+        <% end %>
+        <br><br><br>
+        <h2>Reviews</h2>
+
       </div>
-      <div class="col-sm-5">
+      <div class="col-sm-6 profile_skills">
         <h2>Details</h2>
           <div class="row"> 
             <div class="col-sm-6">
@@ -101,81 +116,6 @@
 </div>
 
 <div class="container">
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @profile.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @profile.state %>
-</p>
-
-<p>
-  <strong>Bio:</strong>
-  <%= @profile.bio %>
-</p>
-
-<p>
-  <strong>Coach type:</strong>
-  <%= @profile.coach_type %>
-</p>
-
-<p>
-  <strong>Rating:</strong>
-  <%= @profile.rating %>
-</p>
-
-<p>
-  <strong>Price low:</strong>
-  <%= @profile.price_low %>
-</p>
-
-<p>
-  <strong>Price high:</strong>
-  <%= @profile.price_high %>
-</p>
-
-<p>
-  <strong>Language:</strong>
-  <%= @profile.language %>
-</p>
-<p>
-  <strong>Industry:</strong>
-  <%= @profile.industry %>
-</p>
-<p>
-  <strong>Certification:</strong>
-  <%= @profile.certification %>
-</p>
-
-<p>
-  <strong>Skills:</strong>
-  <%= @profile.skills %>
-</p>
-
-<p>
-  <strong>Experience:</strong>
-  <%= @profile.experience %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @profile.email %>
-</p>
-
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <%= link_to 'Back', profiles_path %>
 </div>
