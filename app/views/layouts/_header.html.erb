@@ -2,12 +2,27 @@
   <!-- navbar-fixed-top   will go in class above to have it not have it's own element-->
   <header class="header">
     <div class="container">
-      <div class ="col-sm-3 logo" >
+      <div class ="col-sm-2 " >
       <%= link_to image_tag("mentor_mapp.png", size: "300x90", alt: "MentorMapp Logo"), root_path, id:"mentormapp_logo" %>
       </div>
-      <div class="col-sm-9 nav_box">
+      <div class="col-sm-8 nav_box">
         <nav>
           <ul class="nav navbar-nav navbar-right">
+
+
+            <li>      <div class="col-sm-2">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </div>
+      </div></li>
+
+
             <li><%= link_to "Find a Coach",     '#' %></li>
             <li><%= link_to "Become a Coach",   '#' %></li>
             <li><%= link_to "Contact",          new_contact_path %></li>
