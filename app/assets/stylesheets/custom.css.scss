@@ -15,15 +15,28 @@
 .nav_box ul li {
   float: left;
   font-size: 16px;
-  margin: 17px 0 17px 36px;
+  margin: 17px 0 17px 0px;
 }
 .nav_box ul li a {
   color: #766161;
   font-weight: 400;
+  float:right;
+}
+.nav_box ul li button {
+  color: #766161;
+  font-weight: 400;
+  float: left;
+  font-size: 17px;
+  margin: -8px 10px 0px 0px;
+  border: none;
+  padding: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 2.1em;
 }
 .nav_box ul li a:hover {
   color: #3e3636;
-  background-color:transparent;
+  // background-color: rgb(173, 173, 173);
+  background-color: transparent;
 }
 header img {
   float: left;

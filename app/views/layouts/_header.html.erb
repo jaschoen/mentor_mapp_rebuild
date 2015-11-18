@@ -5,13 +5,24 @@
       <div class ="col-sm-2 " >
       <%= link_to image_tag("mentor_mapp.png", size: "300x90", alt: "MentorMapp Logo"), root_path, id:"mentormapp_logo" %>
       </div>
+      <div class="col-sm-2"></div>
       <div class="col-sm-8 nav_box">
         <nav>
           <ul class="nav navbar-nav navbar-right">
-
-
-
-
+            <!-- Start Dropdown event links -->
+            <li>
+              <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Events  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <% @events.each do |event| %>
+                    <li><%= link_to event.location, event_path(event) %></li>
+                    <% end %>
+                </ul>
+              </div>
+            </li>
+            <!-- End of dropdown dynamic links -->
             <li><%= link_to "Find a Coach",     '#' %></li>
             <li><%= link_to "Become a Coach",   '#' %></li>
             <li><%= link_to "Contact",          new_contact_path %></li>

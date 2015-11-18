@@ -1,0 +1,32 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Event date:</strong>
+    <%= @event.event_date %>
+  </p>
+
+  <p>
+    <strong>Event time:</strong>
+    <%= @event.event_time %>
+  </p>
+
+  <p>
+    <strong>Mentor:</strong>
+    <%= @event.mentor %>
+  </p>
+
+  <p>
+    <strong>Location:</strong>
+    <%= @event.location %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @event.description %>
+  </p>
+
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Back', events_path %>
+  <br><br>
+</div>
