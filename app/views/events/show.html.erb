@@ -1,5 +1,5 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
+
 
   <p>
     <strong>Event date:</strong>
@@ -26,7 +26,10 @@
     <%= @event.description %>
   </p>
 
-  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <% if can? :edit, @event %>
+    <td><%= link_to 'Edit', edit_event_path(@event) %></td>
+    <td><%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <% end %>
   <%= link_to 'Back', events_path %>
   <br><br>
 </div>

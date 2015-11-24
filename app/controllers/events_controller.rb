@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
+  # load_and_authorize_resource
   # GET /events
   # GET /events.json
   def index
@@ -14,17 +15,20 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
-    @event = Event.new
+    @event = current_user.events.build
+
   end
 
   # GET /events/1/edit
   def edit
+    authorize! :edit, @event
   end
 
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
+    authorize! :create, @event
+    @event = current_user.events.build(event_params)
 
     respond_to do |format|
       if @event.save
@@ -40,6 +44,7 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
+    authorize! :edit, @event
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
@@ -54,6 +59,7 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
+    authorize! :destroy, @event
     @event.destroy
     respond_to do |format|
       format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }

@@ -15,6 +15,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'simple_form', '~> 3.2'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'autoprefixer-rails'
+gem 'cancancan', '~> 1.13', '>= 1.13.1'
 
 group :development, :test do
   gem 'byebug'
