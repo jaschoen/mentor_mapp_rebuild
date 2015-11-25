@@ -28,7 +28,7 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     authorize! :create, @profile
-    
+    @contact = Contact.new
     @contact = Contact.new(contact_params)
     @contact.request = request
     @contact.deliver
@@ -84,6 +84,6 @@ class ProfilesController < ApplicationController
     end
 
     def contact_params()
-    params.require(:contact).permit(:first_name, :last_name, :email, :message, :nickname)
+      params.require(:contact).permit(:first_name, :last_name, :email, :message, :nickname)
   end
 end
