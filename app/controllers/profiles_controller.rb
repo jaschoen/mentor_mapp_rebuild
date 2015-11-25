@@ -28,11 +28,6 @@ class ProfilesController < ApplicationController
   # POST /profiles.json
   def create
     authorize! :create, @profile
-    @contact = Contact.new
-    @contact = Contact.new(contact_params)
-    @contact.request = request
-    @contact.deliver
-
     @profile = current_user.build_profile(profile_params)
 
     respond_to do |format|
@@ -83,7 +78,5 @@ class ProfilesController < ApplicationController
       params.require(:profile).permit(:first_name, :last_name, :city, :state, :bio, :coach_type, :rating, :price_low, :price_high, :language, :certification, :skills, :experience, :email, :industry)
     end
 
-    def contact_params()
-      params.require(:contact).permit(:first_name, :last_name, :email, :message, :nickname)
-  end
+
 end
