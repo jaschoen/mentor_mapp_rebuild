@@ -16,6 +16,7 @@ gem 'simple_form', '~> 3.2'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'autoprefixer-rails'
 gem 'cancancan', '~> 1.13', '>= 1.13.1'
+gem 'ransack', '~> 1.7'
 
 group :development, :test do
   gem 'byebug'

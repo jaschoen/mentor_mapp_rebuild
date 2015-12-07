@@ -6,7 +6,8 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.json
   def index
-    @profiles = Profile.all
+    @q = Profile.ransack(params[:q].try(:merge, m: 'or'))
+    @profiles = @q.result(distint:true)
   end
 
   # GET /profiles/1
@@ -17,7 +18,6 @@ class ProfilesController < ApplicationController
   # GET /profiles/new
   def new
     @profile = current_user.build_profile
-    @notification = Notification.new
   end
 
   # GET /profiles/1/edit
@@ -30,11 +30,7 @@ class ProfilesController < ApplicationController
   def create
     authorize! :create, @profile
     @profile = current_user.build_profile(profile_params)
-     
-    @notification = Notification.new
-    @notification.request = request
-    @notification.deliver
-    
+         
     respond_to do |format|
       if @profile.save
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
@@ -80,7 +76,7 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:first_name, :last_name, :city, :state, :bio, :coach_type, :rating, :price_low, :price_high, :language, :certification, :skills, :experience, :email, :industry)
+      params.require(:profile).permit(:first_name, :last_name, :city, :state, :bio, :coach_type, :rating, :price_low, :price_high, :language, :certification, :skills, :experience, :email, :industry, :leadership, :wellbeing, :management)
     end
 
 

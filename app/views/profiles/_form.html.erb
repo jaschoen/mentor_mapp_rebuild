@@ -13,6 +13,12 @@
             <%= f.input :experience %>
             <%= f.input :coach_type %>
             <%= f.input :rating %>
+            <%= f.label "Leadership" %>
+            <%= f.check_box :leadership, {}, "leadership", "" %>
+            <%= f.label "Wellbeing" %>
+            <%= f.check_box :wellbeing, {}, "wellbeing", "" %>
+            <%= f.label "Management" %>
+            <%= f.check_box :management, {}, "management", "" %>
           </div>
           <div class="col-sm-6">
             <%= f.input :price_low %>
@@ -33,3 +39,4 @@
     </div>
   </div>
 </div>
+

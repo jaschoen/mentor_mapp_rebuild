@@ -1,5 +1,43 @@
 <div class="container">
-  <h1>Profiles</h1>
+  <div class="row">
+    <div class="col-sm-5">
+      <%= search_form_for @q do |f| %>
+    
+      <%= f.label "Keyword Search" %>
+      <%= f.search_field :first_name_or_last_name_or_city_or_state_or_bio_or_coach_type_or_language_or_certification_or_skills_or_experience_or_email_or_leadership_or_wellbeing_or_management_cont %>
+      <br><br>
+      Coach Type (check all that apply)<br>
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <%= check_box_tag "q[leadership_cont]", value = "leadership" %>Leadership
+            </label>  
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <%= check_box_tag "q[management_cont]", value = "management" %>Management
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox">
+            <label>
+              <%= check_box_tag "q[wellbeing_cont]",  value = "wellbeing" %>Wellbeing
+            </label>
+          </div>
+        </div>
+
+      <br>
+      <%= f.submit "Search" %>
+    </div>
+  </div>
+  <% end %>
+
+  <h1>Coaches</h1>
 
   <table>
     <thead>
@@ -54,3 +92,4 @@
 
   <%= link_to 'New Profile', new_profile_path %>
 </div>
+
