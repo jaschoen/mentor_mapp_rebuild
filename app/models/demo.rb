@@ -5,7 +5,7 @@ class Demo < MailForm::Base
   attribute :location,    :validate => true
   def headers 
     {
-      :subject => "Demo Request",
+      :subject => "Demo Request mentor mapp rebuild",
       :to      => "jaschoen@gmail.com",
       :from    => %("#{location} #{industry}" <#{email}>),
     }

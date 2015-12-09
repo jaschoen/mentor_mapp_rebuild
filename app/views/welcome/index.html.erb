@@ -25,6 +25,25 @@
 
       </div>
     </form>
+    <!-- start deploy mentor working form  -->
+    <div id="searchbar">
+      <div class="searchbar">
+        <%= form_for @demo do |f| %>
+        <div class="form-inputs">
+          <%= f.label :email %><br>
+          <%= f.text_field :email, required: true %>
+          <%= f.label :industry %><br>
+          <%= f.text_field :industry %>
+          <%= f.label :location %>
+          <%= f.text_field :location %>
+        </div><br><br>
+        <div class="form-actions">
+          <%= f.submit 'Request Demo', class: "button btn-primary" %>
+        </div>   
+      <% end %>
+      </div>
+    </div>
+    <!-- end form -->
 </div>
 
 
