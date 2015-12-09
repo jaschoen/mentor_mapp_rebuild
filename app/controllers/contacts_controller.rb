@@ -11,7 +11,6 @@ class ContactsController < ApplicationController
     @contact.request = request
     if @contact.deliver
       flash.now[:error] = nil
-      byebug
     else
       flash.now[:error] = 'Cannot send message.'
       render :new
