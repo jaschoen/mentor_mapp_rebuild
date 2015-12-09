@@ -7,7 +7,7 @@ class Demo < MailForm::Base
     {
       :subject => "Demo Request",
       :to      => "jaschoen@gmail.com",
-      :from    => %("#{email} #{email}" <#{email}>),
+      :from    => %("#{location} #{industry}" <#{email}>),
     }
   end
 
