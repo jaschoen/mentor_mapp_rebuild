@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   resources :profiles
   resources :contacts, only: [:new, :create]
   resources :welcome, only: [:new, :create, :index]
-  # root 'demos#index'
-  root 'welcome#index'
+  root 'demos#new'
+  # root 'welcome#index'
   get 'tos' => 'tos#index'
   # get '*path' => redirect('/')
 end

@@ -3,9 +3,9 @@
     <div class="front_image">
       <%= image_tag("cover_image.jpg", alt: "Cover Image", class: "img-responsive") %>
     </div>
-<!--     <p class="front_text">
+     <p class="front_text">
       Marketplace where coaches and clients invest in their future
-    </p> -->
+    </p>
     <br>
     <form class="form-inline">
       <div class="form-group">
@@ -19,7 +19,8 @@
               <div class="demo_contact"> 
                 <%= f.text_field :location, placeholder: "location" %>
               </div>
-              <div class="demo_contact"> <%= f.submit 'Request Demo', class: "button btn-primary" %></div>
+              <div class="demo_contact"> <%= f.submit 'Request Demo', class: "button btn-primary" %>
+              </div>
           <% end %>
 
       </div>
