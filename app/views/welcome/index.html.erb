@@ -30,15 +30,20 @@
       <div class="searchbar">
         <%= form_for @demo do |f| %>
         <div class="form-inputs">
-          <%= f.label :email %><br>
-          <%= f.text_field :email, required: true %>
-          <%= f.label :industry %><br>
-          <%= f.text_field :industry %>
-          <%= f.label :location %>
-          <%= f.text_field :location %>
+          <div class="demo_contact">
+            <%= f.text_field :email, required: true %>
+          </div>
+          <div class="demo_contact">
+            <%= f.text_field :industry %>
+          </div>
+          <div class="demo_contact">
+            <%= f.text_field :location %>
+          </div>
         </div><br><br>
         <div class="form-actions">
-          <%= f.submit 'Request Demo', class: "button btn-primary" %>
+          <div class="demo_contact">
+            <%= f.submit 'Request Demo', class: "button btn-primary" %>
+          </div>
         </div>   
       <% end %>
       </div>
