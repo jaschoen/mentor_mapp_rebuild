@@ -7,45 +7,30 @@
       Marketplace where coaches and clients invest in their future
     </p>
     <br>
-    <form class="form-inline">
-      <div class="form-group">
 
-            <%= form_for @demo do |f| %>
-              <div class="demo_contact"> <%= f.text_field :email, placeholder: "email", required: true %>
-              </div>
-              <div class="demo_contact">
-                <%= f.text_field :industry, placeholder: "industry" %>
-              </div>
-              <div class="demo_contact"> 
-                <%= f.text_field :location, placeholder: "location" %>
-              </div>
-              <div class="demo_contact"> <%= f.submit 'Request Demo', class: "button btn-primary" %>
-              </div>
-          <% end %>
-
-      </div>
-    </form>
     <!-- start deploy mentor working form  -->
-    <div id="searchbar">
-      <div class="searchbar">
-        <%= form_for @demo do |f| %>
-        <div class="form-inputs">
-          <div class="demo_contact">
-            <%= f.text_field :email, required: true %>
+    <div class="container">
+      <div class="row">
+        <div class="searchbar">
+          <%= simple_form_for @demo do |f| %>
+          <div class="form-inputs">
+            <div class="demo_contact">
+              <%= f.text_field :email, placeholder: "email", required: true %>
+            </div>
+            <div class="demo_contact">
+              <%= f.text_field :industry, placeholder: "Industry", required: true   %>
+            </div>
+            <div class="demo_contact">
+              <%= f.text_field :location, placeholder: "location", required: true  %>
+            </div>
           </div>
-          <div class="demo_contact">
-            <%= f.text_field :industry %>
-          </div>
-          <div class="demo_contact">
-            <%= f.text_field :location %>
-          </div>
-        </div><br><br>
-        <div class="form-actions">
-          <div class="demo_contact">
-            <%= f.submit 'Request Demo', class: "button btn-primary" %>
-          </div>
-        </div>   
-      <% end %>
+          <div class="form-actions">
+            <div class="demo_contact">
+              <%= f.submit 'Request Demo' %>
+            </div>
+          </div>   
+        <% end %>
+        </div>
       </div>
     </div>
     <!-- end form -->
