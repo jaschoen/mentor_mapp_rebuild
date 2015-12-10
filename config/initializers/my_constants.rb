@@ -1,18 +1,4 @@
-class Demo < MailForm::Base
-
-  attribute :email,       :validate => true
-  attribute :industry,    :validate => true
-  attribute :location,    :validate => true
-  def headers 
-    {
-      :subject => "Demo Request mentor mapp rebuild",
-      :to      => "jaschoen@gmail.com",
-      :from    => %("#{location} #{industry}" <#{email}>),
-    }
-  end
-
-  def self.countries
-    [
+Country_drop_down_array = [
   "Afghanistan",
   "Aland Islands",
   "Albania",
@@ -259,11 +245,31 @@ class Demo < MailForm::Base
   "Zambia",
   "Zimbabwe"
 ]
-  end
 
-
-  
-end
+Industry_drop_array = [
+"Arts, Entertainment",
+"Association - Professional/Trade",
+"Construction, Mining",
+"Consulting",
+"Education",
+"Finance",
+"Government",
+"Health Care",
+"HR, Learning and Development",
+"Insurance",
+"Manufacturing",
+"Marketing",
+"Military",
+"Nonprofit",
+"Other",
+"Pharmaceutical",
+"Publishing and Media",
+"Real Estate",
+"Technology",
+"Telecommunications",
+"Transportation",
+"Utilities, Energy"
+]
 
 
 

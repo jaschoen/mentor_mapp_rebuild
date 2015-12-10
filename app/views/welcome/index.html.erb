@@ -10,27 +10,26 @@
 
     <!-- start deploy mentor working form  -->
     <div class="container">
-      <div class="row">
-        <div class="searchbar">
-          <%= simple_form_for @demo do |f| %>
-          <div class="form-inputs">
-            <div class="demo_contact">
-              <%= f.text_field :email, placeholder: "email", required: true %>
-            </div>
-            <div class="demo_contact">
-              <%= f.text_field :industry, placeholder: "Industry", required: true   %>
-            </div>
-            <div class="demo_contact">
-              <%= f.text_field :location, placeholder: "location", required: true  %>
-            </div>
+      <div class="searchbar">
+        <%= simple_form_for @demo do |f| %>
+        <div class="form-inputs">
+          <div class="demo_contact">
+            <%= f.text_field :email, placeholder: "email", required: true %>
           </div>
-          <div class="form-actions">
-            <div class="demo_contact">
-              <%= f.submit 'Request Demo' %>
-            </div>
-          </div>   
-        <% end %>
+
+          <div class="demo_contact">
+            <%= f.select :industry, Industry_drop_array, :prompt => 'Industry' %>
+          </div>
+          <div class="demo_contact">
+            <%= f.select :location, Country_drop_down_array, :prompt => 'Country' %>
+          </div>
         </div>
+        <div class="form-actions">
+          <div class="demo_contact">
+            <%= f.submit 'Request Demo' %>
+          </div>
+        </div>   
+      <% end %>
       </div>
     </div>
     <!-- end form -->
