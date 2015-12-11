@@ -9,27 +9,40 @@
     <br>
 
     <!-- start deploy mentor working form  -->
-    <div class="container">
-      <div class="searchbar">
+    <div class="searchbar">
+      <div class="row">    
         <%= simple_form_for @demo do |f| %>
         <div class="form-inputs">
-          <div class="demo_contact">
-            <%= f.text_field :email, placeholder: "email", required: true %>
+          <div class="col-sm-3">
+          <div class="demo_contact demo_email_field" >
+            <%= f.text_field :email, placeholder: "Email", required: true %>
+          </div>
           </div>
 
-          <div class="demo_contact">
-            <%= f.select :industry, Industry_drop_array, :prompt => 'Industry' %>
+          <div class="col-sm-3">
+          <div class="demo_contact demo_dropdown ">
+            <%= f.select( :industry, Category_drop_array, { prompt: 'Select Category ◊' }) %>
           </div>
-          <div class="demo_contact">
-            <%= f.select :location, Country_drop_down_array, :prompt => 'Country' %>
           </div>
+
+          <div class="col-sm-3">
+          <div class="demo_contact demo_dropdown ">
+              <%= f.select( :location, Country_drop_down_array, { :prompt => 'Select Country  ◊'}) %>
+          </div>
+          </div>
+
         </div>
         <div class="form-actions">
+          <div class="col-sm-3">
           <div class="demo_contact">
-            <%= f.submit 'Request Demo' %>
+            <%= button_tag(type: 'submit', class: "btn btn-primary" ) do %>
+              Free 30 Min Demo!  <span class=""></span> 
+            <% end %>
           </div>
+          </div>
+
         </div>   
-      <% end %>
+        <% end %>
       </div>
     </div>
     <!-- end form -->
@@ -37,6 +50,7 @@
 
 
 <!-- What is mentormapp -->
+<br>
 <div class="container">
   <div class="row">
     <div class="def_mentormapp">

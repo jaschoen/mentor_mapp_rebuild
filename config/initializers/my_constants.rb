@@ -1,4 +1,14 @@
 Country_drop_down_array = [
+  "United States",
+  "France", 
+  "Switzerland",
+  "Germany",
+  "Austria",
+  "Belgium",
+  "Netherlands",
+  "Italy",
+  "Spain",
+
   "Afghanistan",
   "Aland Islands",
   "Albania",
@@ -269,6 +279,20 @@ Industry_drop_array = [
 "Telecommunications",
 "Transportation",
 "Utilities, Energy"
+]
+
+Category_drop_array = [
+"Collaborative Learning",
+"Personal Leadership",
+"High Performing Team",
+"Sales & Business Developement",
+"Technical Marketing",
+"Software Engineering",
+"User Experience Design",
+"Entrepreneurship",
+"Ideation/Vision Creation",
+"Something Else..."
+
 ]
 
 

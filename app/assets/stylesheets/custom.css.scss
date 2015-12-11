@@ -282,7 +282,45 @@ p.contact {
   }
 }
 
+// =========================Demo Request Styles ===================================
+
+
+
 .demo_contact {
-  display: inline-block
+  display: inline-block;
 }
+
+.demo_contact select, .demo_contact input, .demo_contact button, .demo_contact button:active  {
+  appearance: none;
+  display: inline;
+  padding: 3px 30px;
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left; 
+  max-width: 300px;
+  border-radius: 0px;
+  background-color: white;
+  border: 1px solid black;
+  color:#4d4d4d;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+
+
+.demo_contact ::-webkit-input-placeholder {
+   color: #4d4d4d;
+}
+
+.searchbar .row .col-sm-3 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.searchbar .row {
+  padding-left: 6px;
+  margin-left: 5px;
+}
+
+
 
