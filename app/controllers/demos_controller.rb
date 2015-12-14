@@ -11,9 +11,10 @@ class DemosController < ApplicationController
     @demo.request = request
     if @demo.deliver
       flash.now[:error] = nil
+      redirect_to root_path, alert: "Demo requested, we'll get back to you soon!"
     else
       flash.now[:error] = 'Cannot send message.'
-      render :new
+      redirect_to root_path, alert: "Please Enter All Information"
     end
   end
 
