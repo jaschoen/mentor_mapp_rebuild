@@ -30,7 +30,7 @@ class ProfilesController < ApplicationController
   def create
     authorize! :create, @profile
     @profile = current_user.build_profile(profile_params)
-    @contact = Contact.new(message: "New Profile Created", first_name: @profile.first_name, last_name: @profile.last_name, email: @profile.email)
+    @contact = Contact.new(message: "A New Profile Has Been Created", first_name: @profile.first_name, last_name: @profile.last_name, email: @profile.email)
     @contact.request = request
     @contact.deliver
     

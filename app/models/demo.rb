@@ -11,7 +11,6 @@ class Demo < MailForm::Base
     }
   end
 
-  
 end
 
 
