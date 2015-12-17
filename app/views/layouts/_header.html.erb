@@ -13,7 +13,7 @@
             <li>
               <div class="btn-group">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Events  <span class="caret"></span>
+                Find an Event  <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
                     <% @events.each do |event| %>
@@ -23,8 +23,8 @@
               </div>
             </li>
             <!-- End of dropdown dynamic links -->
-            <li><%= link_to "Find a Coach",     '#' %></li>
-            <li><%= link_to("Become a Coach",   "https://docs.google.com/forms/d/15L7QFsFu9wU61FBHg51vDsgwl_UXACm_yGdzJ14bZ3o/viewform?embedded=true") %></li>
+            <li><%= link_to "Find a Coach",     'http://bit.ly/1P68e2A' %></li>
+            <li><%= link_to("Become a Coach",   "http://bit.ly/1m5BFI9") %></li>
             <li><%= link_to "Contact",          new_contact_path %></li>
             <li><%= link_to("Sign In", new_user_session_path) if !user_signed_in? %></li>
             <li><%= link_to("Sign Out", destroy_user_session_path, :method => :delete) if user_signed_in? %></li>
