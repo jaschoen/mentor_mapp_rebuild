@@ -1,21 +1,21 @@
 <!-- First Image and background text  -->
 <div class="container ">
-    <div class="front_image">
-      <%= image_tag("cover_image.jpg", alt: "Cover Image", class: "img-responsive") %>
-    </div>
+    <!--<div class="front_image">-->
+      <!--<%#= image_tag("cover_image.jpg", alt: "Cover Image", class: "img-responsive") %>-->
+    <!--</div>-->
      <p class="front_text">
-      Marketplace where coaches and clients invest in their future
+       Platform for mapping lifelong learners to unique mentoring and coaching solutions.
     </p>
     <br>
 
     <!-- start deploy mentor working form  -->
     <div class="searchbar">
-      <div class="row">    
+      <div class="row pull-right-sm">
         <%= simple_form_for @demo do |f| %>
         <div class="form-inputs">
           <div class="col-sm-3">
           <div class="demo_contact demo_email_field" >
-            <%= f.text_field :email, placeholder: "Email", required: true %>
+            <%= f.text_field :email, placeholder: "Email", id:"text_email", required: true %>
           </div>
           </div>
 
@@ -35,13 +35,13 @@
         <div class="form-actions">
           <div class="col-sm-3">
           <div class="demo_contact">
-            <%= button_tag(type: 'submit', class: "btn btn-primary" ) do %>
-              Free 30 Min Demo!  <span class=""></span> 
+            <%= button_tag(type: 'submit', class: "btn btn-primary" , id: "btn_sub" ) do %>
+              Free 30 Min Demo!  <span class=""></span>
             <% end %>
           </div>
           </div>
 
-        </div>   
+        </div>
         <% end %>
       </div>
     </div>

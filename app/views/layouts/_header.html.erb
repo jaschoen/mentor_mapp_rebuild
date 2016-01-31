@@ -1,6 +1,6 @@
 <!-- start responsive navbar header in bootstrap-->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<nav class="navbar transparent navbar-inverse">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
@@ -29,8 +29,8 @@
             <!-- End of dropdown dynamic links -->
             <li><%= link_to "Find a Coach", 'http://bit.ly/1P68e2A' %></li>
             <li><%= link_to("Become a Coach", "http://bit.ly/1m5BFI9") %></li>
-            <li><%= link_to "Contact", new_contact_path %></li>
-            <li><%= link_to("Sign In", new_user_session_path) if !user_signed_in? %></li>
+            <li><%= link_to "Contact", new_contact_path, { id: 'contact_btn' }%></li>
+            <li><%= link_to("Sign In",new_user_session_path, id: 'login_btn') if !user_signed_in? %></li>
             <li><%= link_to("Sign Out", destroy_user_session_path, :method => :delete) if user_signed_in? %></li>
           </ul>
         </nav>
