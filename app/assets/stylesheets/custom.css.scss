@@ -275,8 +275,9 @@ p.testimonial-paragraph {
 }
 .how_it_work ul li h1 {
   text-align: left;
-  font-size: 1.6em;
+  font-size: 16px;
   font-weight: 700;
+  font-family: Helvetica;
   margin-bottom: 1%;
   margin-top: 7px;
   line-height: 1.1;
@@ -285,10 +286,12 @@ p.testimonial-paragraph {
   float: left;
   margin-right: 30px;
   margin-bottom: 20px;
+  padding-bottom: 25px;
 }
 .how_it_work ul li p {
   color: #5c5252;
   font-size: 12px;
+  font-family: Helvetica-Light;
 }
 .how_it_work h1 {
   font-size: 40px;
