@@ -14,20 +14,23 @@
         <%= simple_form_for @demo do |f| %>
         <div class="form-inputs">
           <div class="col-sm-3">
-          <div class="demo_contact demo_email_field" >
-            <%= f.text_field :email, placeholder: "Email", id:"text_email", required: true %>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon2">@</span>
+              <%= f.text_field :email, placeholder: "Email", id:"text_email",class: 'form-control', required: true %>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon2">&#9825;</span>
+            <%= f.select( :industry, Category_drop_array, { prompt: 'Select Category'}, class: 'form-control' ,id: 'mySelect') %>
           </div>
           </div>
 
           <div class="col-sm-3">
-          <div class="demo_contact demo_dropdown ">
-            <%= f.select( :industry, Category_drop_array, { prompt: 'Select Category' }) %>
-          </div>
-          </div>
-
-          <div class="col-sm-3">
-          <div class="demo_contact demo_dropdown ">
-              <%= f.select( :location, Country_drop_down_array, { :prompt => 'Select Country'}) %>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon2"><i class="glyphicon glyphicon-map-marker"></i></span>
+              <%= f.select( :location, Country_drop_down_array, { :prompt => 'Select Country'}, class: 'form-control' ,id: 'mySelect') %>
           </div>
           </div>
 
