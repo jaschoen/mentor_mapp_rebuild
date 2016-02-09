@@ -17,6 +17,8 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'autoprefixer-rails'
 gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'ransack', '~> 1.7'
+gem 'omniauth'
+gem 'omniauth-linkedin'
 
 group :development, :test do
   gem 'byebug'
