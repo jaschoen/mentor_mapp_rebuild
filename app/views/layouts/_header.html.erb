@@ -1,37 +1,41 @@
-<nav class="navbar transparent ">
-  <!-- navbar-fixed-top   will go in class above to have it not have it's own element-->
-  <header class="header">
+<!-- start responsive navbar header in bootstrap-->
+<nav class="navbar transparent navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">
+        <%= link_to image_tag("mentor_mapp.png", size: "300x90", alt: "MentorMapp Logo"), root_path, id: "mentormapp_logo" %>
+      </a>
+    </div>
     <div class="container">
-      <div class ="col-sm-2 " >
-      <%= link_to image_tag("mentor_mapp.png", size: "300x90", alt: "MentorMapp Logo"), root_path, id:"mentormapp_logo" %>
-      </div>
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8 nav_box">
+      <div class="collapse navbar-collapse" id="myNavbar">
         <nav>
           <ul class="nav navbar-nav navbar-right">
             <!-- Start Dropdown event links -->
-            <li>
-              <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Find an Event  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <% @events.each do |event| %>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Find an
+                Event
+                <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <% @events.each do |event| %>
                     <li><%= link_to event.location, event_path(event) %></li>
-                    <% end %>
-                </ul>
-              </div>
+                <% end %>
+              </ul>
             </li>
             <!-- End of dropdown dynamic links -->
-            <li><%= link_to "Find a Coach",     'http://bit.ly/1P68e2A' %></li>
-            <li><%= link_to("Become a Coach",   "http://bit.ly/1m5BFI9") %></li>
-            <li><%= link_to "Contact",          new_contact_path %></li>
-            <li><%= link_to("Sign In", new_user_session_path) if !user_signed_in? %></li>
+            <li><%= link_to "Find a Coach", 'http://bit.ly/1P68e2A' %></li>
+            <li><%= link_to("Become a Coach", "http://bit.ly/1m5BFI9") %></li>
+            <li><%= link_to "Free Trial", new_contact_path, { id: 'contact_btn' }%></li>
+            <li><%= link_to("Log In",new_user_session_path, id: 'login_btn') if !user_signed_in? %></li>
             <li><%= link_to("Sign Out", destroy_user_session_path, :method => :delete) if user_signed_in? %></li>
-            
           </ul>
         </nav>
       </div>
     </div>
-  </header>
+  </div>
 </nav>
+<!--end of responsive navbar header in bootstrap-->

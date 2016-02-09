@@ -4,12 +4,99 @@
 
 // =========================Header Styles ===================================
 
+
+//custom css for header navbar
+.navbar-toggle {
+  position: relative;
+  float: right;
+  margin-right: 15px;
+  padding: 28px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 0px solid transparent;
+  /* border-radius: 4px; */
+}
+
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 34px;
+  height: 2px;
+  border-radius: 1px;
+}
+.navbar-toggle .icon-bar + .icon-bar {
+  margin-top: 6px;
+}
+.nav > li {
+  position: relative;
+  display: block;
+  font-size: 17px;
+}
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+
+/* CSS Transform Align Navbar Brand Text ... This could also be achieved with table / table-cells */
+.navbar-alignit .navbar-header {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 50px;
+}
+.navbar-alignit .navbar-brand {
+  top: 50%;
+  display: block;
+  position: relative;
+  height: auto;
+  transform: translate(0,-50%);
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
 .navbar {
   // position: relative;
   min-height: 50px;
   background: rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 0px solid #d3d3d3;
+
   // box-shadow: 1px 1px 0px #999;
+}
+.navbar-right{
+  margin-top: 20px;
+}
+.navbar {
+  background:transparent;
+}
+body{
+  background-image: url(cover_image.jpg);
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  body  {
+    background-image: none;
+  }
+  .front_text {
+    display: none;
+  }
+  .navbar-toggle {
+    background-color: gray;
+  }
+  .searchbar .row{
+    margin-top: 0px !important;
+  }
+  #btn_sub{
+    padding-right: 470px !important;
+  }
+  .mentormapp {
+    margin-top: 10px !important;
+  }
 }
 .nav_box ul{margin:0;padding:0;list-style:none;float:right;}
 .nav_box ul li {
@@ -42,13 +129,36 @@ header img {
   float: left;
   margin-left: -45px;
 }
-
+#login_btn:hover {
+  background: #f7921e;
+}
+#contact_btn:hover{
+  background: #0773B4;
+}
+#login_btn{
+  background: #f7921e;
+  padding: 9px 18px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  margin: 7px;
+  color: white !important;
+}
+#contact_btn{
+  background: #0773b4;
+  padding: 9px 18px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  margin: 7px;
+  color: white !important;
+}
 // Padding for transparent navbar
 // body { padding-top: 80px; }
 
 // =========================Footer Styles ===================================
 footer {
-  background: #2a2925;
+  background: black;
   padding: 3% 0% 8% 0%;
   text-align:left;
   margin: 0;  
@@ -67,9 +177,10 @@ footer {
   font-size: 15px;
   margin-bottom: 10px;
 }
-.foo_menu li  a{
-  color: #beb1b1;
-  font-size: 15px;
+.foo_menu li a {
+  color: #d8d8d3;
+  font-family: Helvetica-light;
+  font-size: 11.5px;
 }
 .foo_menu > li span {
   border-bottom: 2px solid #f7931b;
@@ -88,16 +199,18 @@ body {
 // =========================First Image Styles ===================================
 .front_text {
   position: absolute;
-  top: 200px;
+  background-color: rgba(216, 216, 216, 0.39) !important;
   left: 0;
-  width: 30%;
   margin: 11%;
-  color: #826767;
+  color: white !important;
   float: left;
   font-size: 2.7vw;
 }
 
 // =========================What is mentormapp Styles ===================================
+.mentormapp{
+  margin-top: 300px;
+}
 .def_mentormapp {
     color: #604747;
     font-size: 16px;
@@ -176,7 +289,6 @@ p.testimonial-paragraph {
 }
 // =========================How it works Styles ===================================
 
-
 .how_it_work {
   margin: 5% 0 0 0;
 }
@@ -186,8 +298,9 @@ p.testimonial-paragraph {
 }
 .how_it_work ul li h1 {
   text-align: left;
-  font-size: 1.6em;
+  font-size: 16px;
   font-weight: 700;
+  font-family: Helvetica;
   margin-bottom: 1%;
   margin-top: 7px;
   line-height: 1.1;
@@ -196,10 +309,15 @@ p.testimonial-paragraph {
   float: left;
   margin-right: 30px;
   margin-bottom: 20px;
+  padding-bottom: 25px;
+}
+.img_pad{
+padding-bottom: 75px !important;
 }
 .how_it_work ul li p {
   color: #5c5252;
-  font-size: 12px;
+  font-size: 16px;
+  font-family: Helvetica-Light;
 }
 .how_it_work h1 {
   font-size: 40px;
@@ -320,7 +438,73 @@ p.contact {
 .searchbar .row {
   padding-left: 6px;
   margin-left: 5px;
+  margin-top: 500px;
 }
 
+#btn_sub{
+  padding-right: 93px;
+  height: 46px;
+  background-color: rgb(7, 115, 180);
+  color: white;
+  border-radius: 0px;
+}
+#text_email {
+  padding-right: 39px;
+  border-radius: 0px;
+  border-left-color: white;
+  border-left: 0px;
+}
+/* small screen portrait */
 
+@media (max-width: 767px) {
 
+  .pull-right-sm {
+    float: right!important;
+    margin-right: 0px;
+  }
+
+}
+
+#info{
+  font-family: Helvetica-Light;
+  font-size: 16px;
+}
+/* footer content*/
+.copy_right {
+  color: #d8d8d3;
+  margin-left: -30px;
+}
+
+.footer_img {
+  margin-left: -70px;
+}
+
+//=================================flash messages =======================
+.alert-warning{
+  background-color: rgba(239, 239, 239, 0.67);
+  border-color: rgba(239, 239, 239, 0.58);
+  color: #252422;}
+
+#sizing-addon2{
+  margin-right: 0px !important;
+  border-radius: 0px;
+  background-color: white;
+  border-right-color: white;
+
+}
+.form-control {
+  border-radius: 0px;
+}
+
+select:not([multiple]){
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  background-position:right 50%;
+  background-repeat:no-repeat;
+}
+
+#mySelect {
+  border-radius:0;
+  padding-top: 1px;
+  border-left-width: 0px;
+}

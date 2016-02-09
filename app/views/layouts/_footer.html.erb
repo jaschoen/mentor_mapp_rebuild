@@ -1,19 +1,28 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
-        <%= link_to image_tag("mentor_mapp.png", size: "300x90", alt: "MentorMapp Logo"), root_path, id:"mentor_mapp_logo" %>
+      <div class="col-sm-6 pull-left">
+        <%= link_to image_tag("image02.png", size: "300x90", alt: "MentorMapp Logo"), root_path, id:"mentor_mapp_logo" ,class: 'footer_img'%>
+        <p class="copy_right"><b>MentorMapp, Inc. © 2016</b></p>
       </div>
       <div class="col-sm-6">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
+          <ul class="foo_menu">
+            <li><%= link_to raw("<span>Coaching</span> Resources"),   '#' %></li>
+            <li><%= link_to "External Coach",'#' %></li>
+            <li><%= link_to "Internal Coach",           '#' %></li>
+            <li><%= link_to "Mentor",'https://www.ideator.com/blog/ideator-profile-mentormapp-com/' %></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
           <ul class="foo_menu">
             <li><%= link_to raw("<span>Coaching</span> Community"),   '#' %></li>
             <li><%= link_to "Purpose and Objective",'#' %></li>
             <li><%= link_to "Guidelines",           '#' %></li>
-            <li><%= link_to "Blog",                 'https://www.ideator.com/blog/ideator-profile-mentormapp-com/' %></li>
+            <li><%= link_to "Blog",'https://www.ideator.com/blog/ideator-profile-mentormapp-com/' %></li>
           </ul>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <ul class="foo_menu">
             <li><%= link_to raw("<span>General</span> Information"),  '#' %></li>
             <li><%= link_to "Terms and Privacy ", tos_path %></li>
