@@ -14,14 +14,21 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
+#default: &default
+#  adapter: mysql2
+#  encoding: utf8
+#  reconnect: false
+#  pool: 500
+#  username: root
+#  password:
+#  host: localhost
+
 default: &default
-  adapter: mysql2
-  encoding: utf8
-  reconnect: false
-  pool: 500
-  username: root
-  password:
-  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
 
 development:
   <<: *default
