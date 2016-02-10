@@ -84,9 +84,19 @@ body{
 }
 }
 
+@media only screen and (max-width: 990px) {
+  .carousel-inner {
+
+    height: 400px !important;
+  }
+}
 @media only screen and (max-width: 768px) {
   body  {
     background-image: none;
+  }
+  .carousel-inner {
+
+    height: 600px !important;
   }
   .front_text {
     display: none;
@@ -258,7 +268,12 @@ body {
 //   font-weight: bold;
 // }
 
-
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  height: 350px;
+}
 
 ul.testimonial_buttons li {
   margin: 45px 27px 30px;
