@@ -29,7 +29,7 @@
             <!-- End of dropdown dynamic links -->
             <li><%= link_to "Find a Coach", 'http://bit.ly/1P68e2A' %></li>
             <li><%= link_to("Become a Coach", "http://bit.ly/1m5BFI9") %></li>
-            <li><%= link_to "Free Trial", new_contact_path, { id: 'contact_btn' }%></li>
+            <li><%= link_to "Free Trial", new_user_registration_path, { id: 'contact_btn' }%></li>
             <li><%= link_to("Log In",new_user_session_path, id: 'login_btn') if !user_signed_in? %></li>
             <li><%= link_to("Sign Out", destroy_user_session_path, :method => :delete) if user_signed_in? %></li>
           </ul>
