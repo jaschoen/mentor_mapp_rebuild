@@ -563,7 +563,10 @@ select:not([multiple]){
 .headline{
   font-family: Helvetica Neue;
 }
+article , h3 , p {
+  font-family: Helvetica Neue;
 
+}
 article ,p {
   font-size: 16px;
   font-family: Helvetica Neue;
