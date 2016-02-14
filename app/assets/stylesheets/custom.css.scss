@@ -90,6 +90,7 @@ body{
     height: 400px !important;
   }
 }
+
 @media only screen and (max-width: 768px) {
   body  {
     background-image: none;
@@ -593,4 +594,20 @@ article ,p {
 .social_link {
   display: inline;
   margin-left: 12px;
+}
+
+//====================responsive screen for contact , sing up and sing in ===============
+@media only screen and (max-width: 1199px) {
+ #sing_up {
+    background-color: initial;
+    position: initial;
+    margin-top: initial;
+    margin-left: initial;
+   height: initial;
+   width: 433px;
+ }
+
+  .img-responsive{
+    visibility: hidden;
+  }
 }
