@@ -501,7 +501,7 @@ p.contact {
 }
 
 .footer_img {
-  margin-left: -70px;
+  margin-left: -32px;
 }
 
 //=================================flash messages =======================
@@ -577,4 +577,17 @@ article ,p {
   border-width: 0px;
   border: 0px;
   height: 45px;
+}
+.navbar-inverse {
+  background-color: transparent !important;
+  border-color: rgba(9, 9, 9, 0);
+}
+
+.nav_log {
+  margin-top: 20px;
+
+}
+.social_link {
+  display: inline;
+  margin-left: 12px;
 }
