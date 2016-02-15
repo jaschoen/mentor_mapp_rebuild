@@ -74,13 +74,30 @@
   background:transparent;
 }
 body{
-  background-image: url(cover_image.jpg);
+  background-image: image-url('cover_image.jpg');
   background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 1199px) {
+#btn_sub{
+  font-size: xx-small !important;
+}
+}
+
+@media only screen and (max-width: 990px) {
+  .carousel-inner {
+
+    height: 400px !important;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   body  {
     background-image: none;
+  }
+  .carousel-inner {
+
+    height: 600px !important;
   }
   .front_text {
     display: none;
@@ -252,7 +269,12 @@ body {
 //   font-weight: bold;
 // }
 
-
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  height: 350px;
+}
 
 ul.testimonial_buttons li {
   margin: 45px 27px 30px;
@@ -327,6 +349,8 @@ padding-bottom: 75px !important;
 }
 .pc_photo {
   margin: 7% 0 0 0;
+  padding-top: 160px;
+
 }
 .border_spe {
     border-bottom: 4px solid #f7921e;
@@ -341,6 +365,7 @@ padding-bottom: 75px !important;
 .why_it_works_iphone {
   text-align: right;
   padding: 0 7% 0 0;
+  padding-top: 222px;
 }
 .why_use_it .how_it_work h1 {
   margin: 0 0 0.5em 0;
@@ -398,6 +423,7 @@ p.contact {
   strong {
     text-decoration: underline;
   }
+  line-height: 26px;
 }
 
 // =========================Demo Request Styles ===================================
@@ -442,7 +468,7 @@ p.contact {
 }
 
 #btn_sub{
-  padding-right: 93px;
+  padding-right: 0px;
   height: 46px;
   background-color: rgb(7, 115, 180);
   color: white;
@@ -472,11 +498,13 @@ p.contact {
 /* footer content*/
 .copy_right {
   color: #d8d8d3;
-  margin-left: -30px;
+  margin-left: -36px;
+  font-size: 12px;
+  font-family: "Helvetica Neue";
 }
 
 .footer_img {
-  margin-left: -70px;
+  margin-left: -32px;
 }
 
 //=================================flash messages =======================
@@ -507,4 +535,81 @@ select:not([multiple]){
   border-radius:0;
   padding-top: 1px;
   border-left-width: 0px;
+}
+
+//==================================events css==========================
+.find_become_coach{
+  align-items: center;
+  text-align: center;
+}
+.event{
+  background-color: white;
+}
+
+//===============================sing up =================================
+#sing_up{
+  background-color: white;
+  position: absolute;
+  margin-top: 158px;
+  margin-left: 158px;
+  height: 434px;
+  width: 433px;
+
+}
+
+//===========================blog========================================
+
+.blog_div{
+  background: rgba(165, 165, 162, 0.07) none repeat scroll 0 0;
+
+}
+.headline{
+  font-family: Helvetica Neue;
+}
+article , h3 , p {
+  font-family: Helvetica Neue;
+
+}
+article ,p {
+  font-size: 16px;
+  font-family: Helvetica Neue;
+}
+
+.s_icon {
+  fill: white;
+  background: #d8d8d3;
+  border-radius: 55px;
+  border-color: black;
+  border-width: 0px;
+  border: 0px;
+  height: 45px;
+}
+.navbar-inverse {
+  background-color: transparent !important;
+  border-color: rgba(9, 9, 9, 0);
+}
+
+.nav_log {
+  margin-top: 20px;
+
+}
+.social_link {
+  display: inline;
+  margin-left: 12px;
+}
+
+//====================responsive screen for contact , sing up and sing in ===============
+@media only screen and (max-width: 1199px) {
+ #sing_up {
+    background-color: initial;
+    position: initial;
+    margin-top: initial;
+    margin-left: initial;
+   height: initial;
+   width: 433px;
+ }
+
+  #landing_img{
+    visibility: hidden;
+  }
 }

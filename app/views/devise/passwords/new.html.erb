@@ -2,7 +2,7 @@
   <h1 id="page_title"></h1>
   <div class="row">
     <div class="col-sm-4" id="mentor_description">
-      <h2>Forgot your password?</h2>
+      <h4>Forgot your password?</h4>
 
       <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
           <%= f.error_notification %>
@@ -19,7 +19,7 @@
       <%= render "devise/shared/links" %>
 
     </div>
-    <div class="col-sm-8 contact_image">
+    <div class="col-sm-8 contact_image" style="visibility: hidden;">
       <%= image_tag("landing-image.jpg", :alt => "Many Portraits", class: "img-responsive") %>
     </div>
   </div>
