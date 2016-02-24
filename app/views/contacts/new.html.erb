@@ -1,38 +1,38 @@
-
 <div class="container" id="contact_us_container">
   <h1 id="page_title"></h1>
   <div class="row">
-    <div class="col-sm-4" id="mentor_description">
-      <p>
-        MentorMapp is a safe, efficient, and affordable way to match coaches or mentors with people (or companies) seeking professional development in leadership, management, and wellbeing.
-      </p>
-      <div>
-        <%= form_for @contact do |f| %>
-          <%= f.label :first_name %><br>
-          <%= f.text_field :first_name, required: true %>
-          <br>
-          <%= f.label :last_name %><br>
-          <%= f.text_field :last_name %>
-          <br>
-          <%= f.label :email %><br>
-          <%= f.text_field :email %>
-          <br>
-          <%= f.label :message %><br>
-          <%= f.text_area :message %>
-          <div class="hidden">
-            <%= f.label :nickname %><br>
-            <%= f.text_field :nickname, hint: 'leave this field blank' %>
-          </div>
-          <br>
-          <br>
-          <%= f.submit 'Send Message', class: "button btn-primary letter_spacing_bigger" %>
+    <div class="col-sm-offset-2 col-sm-8">
+      <div class="col-sm-offset-3 col-sm-6" id="sing_up">
+        <h4>Contact Us</h4>
+        <div>
+          <%= form_for @contact do |f| %>
+              <%= f.label :first_name %><br>
+              <%= f.text_field :first_name, required: true %>
+              <br>
+              <%= f.label :last_name %><br>
+              <%= f.text_field :last_name %>
+              <br>
+              <%= f.label :email %><br>
+              <%= f.text_field :email %>
+              <br>
+              <%= f.label :message %><br>
+              <%= f.text_area :message %>
+              <div class="hidden">
+                <%= f.label :nickname %><br>
+                <%= f.text_field :nickname, hint: 'leave this field blank' %>
+              </div>
+              <br>
+              <br>
+              <%= f.submit 'Send Message', class: "button btn-default" %>
           <% end %>
-
+        </div>
       </div>
-
-    </div>
-    <div class="col-sm-8 contact_image">
-      <%= image_tag("landing-image.jpg", :alt => "Many Portraits", class: "img-responsive") %> 
+      <%= image_tag("landing-image.jpg", :alt => "Many Portraits", class: "img-responsive" , id: "landing_img") %>
     </div>
   </div>
 </div>
+<style>
+    body{
+        background-image: none;
+    }
+</style>

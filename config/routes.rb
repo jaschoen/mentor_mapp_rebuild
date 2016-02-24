@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   resources :demos
   devise_for :users
   resources :events
@@ -8,5 +10,6 @@ Rails.application.routes.draw do
   # root 'demos#new'
   root 'welcome#index'
   get 'tos' => 'tos#index'
+  get 'blog' => 'blogs#index'
   # get '*path' => redirect('/')
 end

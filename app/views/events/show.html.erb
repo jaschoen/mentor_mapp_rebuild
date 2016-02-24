@@ -1,35 +1,62 @@
 <div class="container">
+  <div class="row pricing_area">
+    <div class="col-sm-4">
+      <div class="pricing_table event">
+        <h1>Event date</h1>
+        <div style="background:#f5f6f8;text-align:center;">
+          <p class="price"><%= @event.event_date %></p>
+          <p class="per_month">Location <%= @event.location %></p>
+        </div>
+        <p><%= @event.description %></p>
+        <p class="contact">
+          <% if can? :edit, @event %>
+            <td><%= link_to 'Edit', edit_event_path(@event) %></td>
+            <td><%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        <%= link_to 'Back', events_path %>
+        </p>
+      </div>
+    </div>
 
+    <div class="col-sm-4">
+      <div class="pricing_table event">
+        <h1>Event date</h1>
+        <div style="background:#f5f6f8;text-align:center;">
+          <p class="price"><%= @event.event_date %></p>
+          <p class="per_month">Location <%= @event.location %></p>
+        </div>
+        <p><%= @event.description %></p>
+        <p class="contact">
+          <% if can? :edit, @event %>
+            <td><%= link_to 'Edit', edit_event_path(@event) %></td>
+            <td><%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        <%= link_to 'Back', events_path %>
+        </p>
+      </div>
+    </div>
 
-  <p>
-    <strong>Event date:</strong>
-    <%= @event.event_date %>
-  </p>
+    <div class="col-sm-4">
+      <div class="pricing_table event">
+        <h1>Event date</h1>
+        <div style="background:#f5f6f8;text-align:center;">
+          <p class="price"><%= @event.event_date %></p>
+          <p class="per_month">Location <%= @event.location %></p>
+        </div>
+        <p><%= @event.description %></p>
+        <p class="contact">
+          <% if can? :edit, @event %>
+            <td><%= link_to 'Edit', edit_event_path(@event) %></td>
+            <td><%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+        <%= link_to 'Back', events_path %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <p>
-    <strong>Event time:</strong>
-    <%= @event.event_time.strftime("%I:%M%p %Z") %>
-  </p>
-
-  <p>
-    <strong>Mentor:</strong>
-    <%= @event.mentor %>
-  </p>
-
-  <p>
-    <strong>Location:</strong>
-    <%= @event.location %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @event.description %>
-  </p>
-
-  <% if can? :edit, @event %>
-    <td><%= link_to 'Edit', edit_event_path(@event) %></td>
-    <td><%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  <% end %>
-  <%= link_to 'Back', events_path %>
-  <br><br>
+<div class="container find_become_coach">
+    <span><%= link_to "Find a Coach", 'http://bit.ly/1P68e2A', id: 'contact_btn' %></span>
+    <span><%= link_to("Become a Coach", "http://bit.ly/1m5BFI9",id: 'login_btn') %></span>
 </div>

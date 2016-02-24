@@ -1,47 +1,50 @@
 <!-- First Image and background text  -->
 <div class="container ">
-    <div class="front_image">
-      <%= image_tag("cover_image.jpg", alt: "Cover Image", class: "img-responsive") %>
-    </div>
-     <p class="front_text">
-      Marketplace where coaches and clients invest in their future
-    </p>
+    <!--<div class="front_image">-->
+      <!--<%#= image_tag("cover_image.jpg", alt: "Cover Image", class: "img-responsive") %>-->
+    <!--</div>-->
+  <div class="alert alert-warning front_text">
+    #1 platform for mapping lifelong learners to unique mentoring and coaching solutions.
+  </div>
     <br>
 
     <!-- start deploy mentor working form  -->
     <div class="searchbar">
-      <div class="row">    
+      <div class="row pull-right-sm">
         <%= simple_form_for @demo do |f| %>
         <div class="form-inputs">
           <div class="col-sm-3">
-          <div class="demo_contact demo_email_field" >
-            <%= f.text_field :email, placeholder: "Email", required: true %>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon2">@</span>
+              <%= f.text_field :email, placeholder: "Email", id:"text_email",class: 'form-control', required: true %>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon2">&#9825;</span>
+            <%= f.select( :industry, Category_drop_array, { prompt: 'Select Category'}, class: 'form-control' ,id: 'mySelect') %>
           </div>
           </div>
 
           <div class="col-sm-3">
-          <div class="demo_contact demo_dropdown ">
-            <%= f.select( :industry, Category_drop_array, { prompt: 'Select Category ◊' }) %>
-          </div>
-          </div>
-
-          <div class="col-sm-3">
-          <div class="demo_contact demo_dropdown ">
-              <%= f.select( :location, Country_drop_down_array, { :prompt => 'Select Country  ◊'}) %>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon2"><i class="glyphicon glyphicon-map-marker"></i></span>
+              <%= f.select( :location, Country_drop_down_array, { :prompt => 'Select Country'}, class: 'form-control' ,id: 'mySelect') %>
           </div>
           </div>
 
         </div>
         <div class="form-actions">
           <div class="col-sm-3">
-          <div class="demo_contact">
-            <%= button_tag(type: 'submit', class: "btn btn-primary" ) do %>
-              Free 30 Min Demo!  <span class=""></span> 
+          <div>
+            <%= button_tag( type: 'submit', class: "btn btn-primary form-control" , id: "btn_sub" ) do %>
+            <span>Request A Demo <br>Free 30 Min Mentoring</span>
             <% end %>
           </div>
           </div>
 
-        </div>   
+        </div>
         <% end %>
       </div>
     </div>
@@ -51,7 +54,7 @@
 
 <!-- What is mentormapp -->
 <br>
-<div class="container">
+<div class="container mentormapp">
   <div class="row">
     <div class="def_mentormapp">
       <div class="col-sm-4">
@@ -62,8 +65,8 @@
         </h1>
       </div>
       <div class="col-sm-8">
-        <p class="info">
-          MentorMapp is a safe, efficient, affordable way to match coaches with people (and companies) seeking coaching. You can use MentorMapp to get access to, engage with, connect with, and collaborate with a community of coaches who are experts in leadership, management, and wellbeing. Participants can share their experiences with the community in total confidentiality.
+        <p class="info" id="info">
+          MentorMapp is a safe, efficient, affordable way to match coaches with people (and companies) seeking mentoring and coaching. You can use MentorMapp to get access to, engage with, connect with, and collaborate with a community of mentors and coaches who are experts in leadership, management, and wellbeing. Participants can share their experiences with the community in total confidentiality.
         </p>
       </div>
     </div>
@@ -178,14 +181,14 @@
         <h1><span class="border_spe">How</span> it works</h1>
         <ul>
           <li><%= image_tag("access.jpg", :alt => "") %>
-            <span><h1>Access</h1><p>Our coaching knowledge base by joining our community of coaching practitioners and researchers</p></span></li>
-          <li><%= image_tag("engage.jpg", :alt => "") %><span><h1>Engage</h1><p>With a coaching community of customers, suppliers, and users by posting engaging coaching content</p></span></li>
-          <li><%= image_tag("connect.jpg", :alt => "") %><span><h1>Connect</h1><p>With customers, suppliers, and a growing user network to source or acquire coaching expertise</p></span></li>
-          <li><%= image_tag("cola.jpg", :alt => "") %><span><h1>Collaborate</h1><p>In a creative partnership as a coach, as an individual, or as a company seeking coaching engagements</p></span></li>
+            <span><h1>Access</h1><p>Join MentorMapp to access a knowledge base of practitioners, researchers and enthusiasts. Our community of practice is available to suppliers and consumers of mentoring (or coaching) services.</p></span></li>
+          <li><%= image_tag("engage.jpg", :alt => "") %><span><h1>Engage</h1><p>Create a user profile to begin marketing, or sourcing for, mentoring (or coaching) capabilities. MentorMapp is a convenient platform for engagement with professionals, managers, executives and HR/OD practitioners.</p></span></li>
+          <li><%= image_tag("connect.jpg", :alt => "") %><span><h1>Connect</h1><p>Select vetted mentors and coaches and connect with the best fit via MentorMapp. Searching for specific domain and industry knowledge or methodology and personality assessment can be performed privately and confidentially.</p></span></li>
+          <li><%= image_tag("cola.jpg", :alt => "") %><span><h1>Collaborate</h1><p>Start the mentoring (or coaching) engagement and collaborate in a creative partnership. Sponsoring organizations can measure the performance of the engagement via MentorMapp’s user interface and notifications.</p></span></li>
         </ul>
       </div>
       <div class="col-sm-6 pc_photo mobile_correct_display">
-       <%= image_tag("desktop.png", height: '500', width: '580', :alt => "", class: "img-responsive") %>
+       <%= image_tag("mentormapp_desktop.png", height: '500', width: '580', :alt => "", class: "img-responsive") %>
       </div>
     </div>
   </div>
@@ -196,17 +199,17 @@
   <div class="container">
     <div class="row ">
       <div class="col-sm-6 why_it_works_iphone">
-        <%= image_tag("iphonemock-cropped.png", :alt => "phone") %>
+        <%= image_tag("mentormapp_iphone_img.png", :alt => "phone" ,size: "367x623") %>
       </div>
       <div class="col-sm-6 how_it_work">
         <h1><span class="border_spe">Why</span> use it</h1><br><br>
         <ul>
           <li>
-            <%= image_tag("central.png", :alt => "pointer") %>
-            <span><h1>Centralized</h1><p>Knowledge base for coaches, clients, and companies</p></span></li>
-          <li><%= image_tag("affordable.png", :alt => "pointer") %><span><h1>Affordable</h1><p>Sourcing and acquisition of coaching engagements</p></span></li>
-          <li><%= image_tag("on_demand.png", :alt => "pointer") %><span><h1>On Demand</h1><p>Access to users, customers, and suppliers in coaching networks</p></span></li>
-          <li><%= image_tag("empower.png", :alt => "pointer") %><span><h1>Empowering</h1><p>With discretion among multiple coaching engagement options</p></span></li>
+            <%= image_tag("central.png", :alt => "pointer" , class: 'img_pad') %>
+            <span><h1>Centralized</h1><p>MentorMapp is a centralized  knowledge base for practitioners, mentoring (or coaching) clients and sponsoring organizations.<br> The platform offers the access to global outreach networks and the convenience of independent local communities of practice.</p></span></li>
+          <li><%= image_tag("affordable.png", :alt => "pointer",class: 'img_pad') %><span><h1>Affordable</h1><p>MentorMapp is an alternative channel for marketing to, and acquisition of, consumers of  mentoring and coaching services (no agency commissions). It’s a flexible option for sourcing external mentoring (or coaching) capabilities while benefitting from economies of scales (geographies) and skills (domain and industry).</p></span></li>
+          <li><%= image_tag("on_demand.png", :alt => "pointer",class: 'img_pad') %><span><h1>On Demand</h1><p>Direct access to specialized networks of suppliers and consumers for mentoring and coaching solutions. No agency intermediaries (bottle necks), faster and transparent communications between stakeholders while controlling privacy and confidentiality.</p></span></li>
+          <li><%= image_tag("empower.png", :alt => "pointer", class: 'img_pad') %><span><h1>Empowering</h1><p>MentorMapp allows professionals, managers, executives and HR/OD practitioners to measure every mentoring and coaching engagements against individual, organizational and financial investments. Evaluation of the mentoring (or coaching) engagement can be performed in a timely and more rigorous manner.</p></span></li>
         </ul>
       </div>
     </div>
@@ -224,10 +227,16 @@
             <p class="price">$29</p>
             <p class="per_month">per month</p>
           </div>
-            <p><b>1-3 Months Coaching</b> Match Coach and Client</p>
-            <p><b>Silver Membership</b> Community Benefits</p>
-            <p><b>Basic</b> Membership Program</p>
-            <p class="contact"><%= link_to "Contact Us", new_contact_path %></p>
+          <ul style="height: 220px;">
+              <li>Community of Practice</li>
+              <li>Mapping Stakeholders Engagement</li>
+              <li>Onboarding tips (7days)</li>
+              <li>2 x One-to-one sessions<br> with a Success Coach</li>
+              <li>Executive User Interface</li>
+              <li>Mentor or Coach Access</li>
+              <li>Free trial 14 days</li>
+          </ul>
+          <p class="contact"><%= link_to "Contact Us", new_contact_path %></p>
         </div>
       </div>
 
@@ -238,9 +247,15 @@
             <p class="price">$69</p>
             <p class="per_month">per month</p>
           </div>
-          <p><b>3-6 Months Coaching</b> Match Coach and Client</p>
-          <p><b>Gold Membership</b> Community Benefits</p>
-          <p><b>Professional</b> Membership Program</p>
+          <ul style="height: 220px;">
+              <li>Community of Practice</li>
+              <li>Mapping Stakeholders Engagement</li>
+              <li>Onboarding tips (7days)</li>
+              <li><b>Monthly One-to-one sessions<br> with a Success Coach</b></li>
+              <li>Executive User Interface</li>
+              <li>Mentor or Coach Access</li>
+              <li>Free trial 14 days</li>
+          </ul>
           <p class="contact"><%= link_to "Contact Us", new_contact_path %></p>
         </div>
       </div>
@@ -252,12 +267,19 @@
             <p class="price">$99</p>
             <p class="per_month">per month</p>
           </div>
-          <p><b>6+ Months Coaching</b> Match Coach and Client</p>
-          <p><b>Platinum Membership</b> Community Benefits</p>
-          <p><b>Enterprise</b> Membership Program</p>
+          <ul>
+              <li>Community of Practice</li>
+              <li>Mapping <b>Multiple  Stakeholders </b><br>Engagement</li>
+              <li>Onboarding tips (7days)</li>
+              <li>Monthly One-to-one sessions<br> with a Success Coach</li>
+              <li><b>Sponsor’s Coaching Supervision</b></li>
+              <li>Executive User Interface</li>
+              <li>Coach or Mentor Access</li>
+              <li><b>Dashboard Reporting</b></li>
+              <li>Free trial 14 days</li>
+          </ul>
           <p class="contact"><%= link_to "Contact Us", new_contact_path %></p>
         </div>
       </div>
-
     </div>
 </div>
